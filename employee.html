@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style >
+        table, th, td, tr {
+            border: 1px solid black;
+        }
+        h1 {text-align: center;}
+        </style>
+        <title>employee details</title>
+    </head>
+    <body style="background-color: cadetblue;">
+        <h1>EMPLOYEE DETAILS</h1>
+        <div>
+            <button on click="sortTable()">sort</button>
+        </div>
+        <table id = "myTable">
+        <tr style = "color:rgb(0, 0, 0)">
+            <td>id</td>
+            <td>name</td>
+            <td>age</td>
+            <td>salary</td>
+        </tr>
+        <tr style="color:rgb(252, 248, 248);background-color: darkblue">
+            <td>02</th>
+            <td>mahesh</th>
+            <td>21</th>
+            <td>20000</th>
+        </tr>
+        <tr style = "color:rgb(252, 248, 248);background-color: darkblue;">
+            <td>01</th>
+            <td>haitu</th>
+            <td>30</th>
+            <td>30000</th>
+        </tr>
+        </table>
+        <script>
+            function sortTable() {
+                var table, rows, switching, i, x, y, shouldSwitch;
+                table = document.getElementById("myTable");
+                switching = true;
+                while (switching) {
+                    switching = false;
+                    rows = table.rows;
+                    for (i = 1; i < (rows.length - 1); i++) {
+                        shouldSwitch = false;
+                        x = rows[i].getElementsByTagName("TD")[0];
+                        y = rows[i + 1].getElementsByTagName("TD")[0];
+                            if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    if (shouldSwitch) {
+                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                        switching = true;
+                    }
+                    }
+                }
+        </script>
+        <script>
+            /*var data=[];
+            var cellDesc = ["id","name","age","salary"];
+            var tableRows= document.getElementsByTagName("table")[0].rows;
+            for(var row=1;row<tableRows.length;row++){
+                var cells=tableRows[row].cells;
+                var item={};
+                for(var cell=0;cell<cells.length;cell++){
+                    item[cellDesc[cell]]=cells[cell].innerText;
+                }
+                data.push(item);
+            }
+            //[{id:"01",name:"mahesh",age:21,salary:"20000"},{id:"02",name:"chaitu",age:"30",salary:"30000"}]
+            function sortTable(data) {
+                var n = data.length;
+                var sorted=true;
+                for(var pass=n-1;pass>=0&&sorted;pass--){
+                    sorted=false;
+                    for(var i=0;i<=pass-1;i++){
+                        if(data[i].id<data[i+1].id){
+                            var temp=data[i];
+                            data[i]=data[i+1];
+                            data[i+1]=temp;
+                            swapped=true;
+                        }
+                    }
+                }
+                console.log(data);
+            }
+            sortTable(data);*/
+        </script>
+    </body>
+</html>

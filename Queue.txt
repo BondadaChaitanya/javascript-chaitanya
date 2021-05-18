@@ -1,0 +1,9 @@
+class Queue{
+    constructor(maxsize){
+        this.maxsize=maxsize;
+    }
+    EnQueue(data){
+        if(!this.isFull()){
+            this.a(0)=data;
+    }
+}

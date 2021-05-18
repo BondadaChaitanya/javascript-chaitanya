@@ -1,0 +1,10 @@
+//coverting a number to decimal to binary
+var divident = 4784;
+var divisor = 2;
+var output = "";
+while(divident!=1){
+    divident = Math.floor(divident/divisor);
+    output+=divident%divisor
+}
+output+=divident;
+console.log(output);

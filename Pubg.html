@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+<head>
+    <title>employee list</title>
+</head>
+<body>
+    <button onclick="sortTable()">sort</button>
+    <div>
+        <table id="employeeListTBL" style="width:100%">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>position</th>
+                <th>salary</th>
+            </tr>
+        </table>
+    </div> 
+    <script>
+        function myFunction() {
+            points.sort(function(a, b){return  a-b});
+            emp.sort(function(a,b){
+                return (a.name>b.name)?1:((a.name<b.name)?-1:0);
+            });
+            document.getElementById("demo").innerHTML = emp[0].name+" "+emp[1].name;
+          }
+        </script>
+<script src="employee.js"></script>
+<script src="characters.js"></script>
+</body>
+</html>

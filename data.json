@@ -1,0 +1,27 @@
+{
+    "Characters":[
+        {
+            "id":"1",
+            "Name": “Mahesh”,
+            "Age": 31,
+            "Image": “/image.png”,
+            "Gun":{
+                "Make": “m416”,
+                "Model": “AR”,
+                "Bullets": “5.56mm”
+            }
+        },
+        {
+            "id":"2",
+            "Name": “Chaitu”,
+            "Age": 31,
+            "Image": “/image.png”,
+            "Gun":{
+                "Make": “m416”,
+                "Model": “AR”,
+                "Bullets": “5.56mm”
+            }
+        }
+
+    ]
+}
